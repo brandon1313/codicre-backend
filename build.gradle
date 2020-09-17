@@ -1,0 +1,43 @@
+plugins {
+	id 'org.springframework.boot' version '2.2.2.RELEASE'
+	id 'io.spring.dependency-management' version '1.0.8.RELEASE'
+	id 'java'
+	id 'idea'
+}
+
+group = 'com.rosbana'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+configurations {
+	developmentOnly
+	runtimeClasspath {
+		extendsFrom developmentOnly
+	}
+}
+
+repositories {
+	mavenCentral()
+	maven{url "http://jasperreports.sourceforge.net/maven2/"}
+    maven{url "http://jaspersoft.artifactoryonline.com/jaspersoft/third-party-ce-artifacts/"}
+}
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa:2.0.5.RELEASE'
+    implementation 'org.springframework.boot:spring-boot-starter-security:2.0.5.RELEASE'
+    implementation 'org.springframework.boot:spring-boot-starter-web:2.0.5.RELEASE'
+    implementation 'io.jsonwebtoken:jjwt:0.9.0'
+    implementation 'net.sf.jasperreports:jasperreports:6.4.0'
+    implementation 'net.sf.barcode4j:barcode4j:2.1'
+    implementation 'org.apache.xmlgraphics:batik-bridge:1.9'
+    annotationProcessor 'org.projectlombok:lombok:1.18.10'
+    runtimeOnly 'mysql:mysql-connector-java'
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test:2.0.5.RELEASE'
+    implementation 'org.projectlombok:lombok:1.18.12'
+    compile files('./libs/fonts-extension.jar')
+    implementation 'org.springframework.boot:spring-boot-starter-tomcat:2.0.5.RELEASE'
+}
+
+test {
+	useJUnitPlatform()
+}

@@ -1,0 +1,101 @@
+com/systemsolution/model/Role.java
+ com.systemsolution.model.Role
+com/systemsolution/client/service/ClientService.java
+ com.systemsolution.client.service.ClientService
+com/systemsolution/repository/UserRepository.java
+ com.systemsolution.repository.UserRepository
+com/systemsolution/repository/ClientRepository.java
+ com.systemsolution.repository.ClientRepository
+com/systemsolution/model/RoleName.java
+ com.systemsolution.model.RoleName
+com/systemsolution/authentication/controller/AuthRestAPIs.java
+ com.systemsolution.authentication.controller.AuthRestAPIs
+com/systemsolution/repository/RoleRepository.java
+ com.systemsolution.repository.RoleRepository
+com/systemsolution/client/controller/ClientController.java
+ com.systemsolution.client.controller.ClientController
+com/systemsolution/client/converter/ClientConverter.java
+ com.systemsolution.client.converter.ClientConverter
+com/systemsolution/security/services/UserDetailsServiceImpl.java
+ com.systemsolution.security.services.UserDetailsServiceImpl
+com/systemsolution/authentication/controller/TestRestAPIs.java
+ com.systemsolution.authentication.controller.TestRestAPIs
+com/systemsolution/saving/converter/SavingConverter.java
+ com.systemsolution.saving.converter.SavingConverter
+com/systemsolution/security/jwt/JwtAuthTokenFilter.java
+ com.systemsolution.security.jwt.JwtAuthTokenFilter
+com/systemsolution/model/Saving.java
+ com.systemsolution.model.Saving
+ com.systemsolution.model.Saving$SavingBuilder
+com/systemsolution/commons/auditing/AuditorAwareImpl.java
+ com.systemsolution.commons.auditing.AuditorAwareImpl
+com/systemsolution/authentication/message/request/LoginForm.java
+ com.systemsolution.authentication.message.request.LoginForm
+com/systemsolution/saving/resource/SavingMovementResource.java
+ com.systemsolution.saving.resource.SavingMovementResource
+ com.systemsolution.saving.resource.SavingMovementResource$SavingMovementResourceBuilder
+com/systemsolution/security/services/UserPrinciple.java
+ com.systemsolution.security.services.UserPrinciple
+com/systemsolution/SpringBootJwtAuthenticationApplication.java
+ com.systemsolution.SpringBootJwtAuthenticationApplication
+com/systemsolution/security/WebSecurityConfig.java
+ com.systemsolution.security.WebSecurityConfig
+com/systemsolution/commons/handler/ApiError.java
+ com.systemsolution.commons.handler.ApiError
+com/systemsolution/client/resource/ClientResource.java
+ com.systemsolution.client.resource.ClientResource
+ com.systemsolution.client.resource.ClientResource$ClientResourceBuilder
+com/systemsolution/saving/InterestSchedule.java
+ com.systemsolution.saving.InterestSchedule
+com/systemsolution/commons/wrapper/ApiPage.java
+ com.systemsolution.commons.wrapper.ApiPage
+com/systemsolution/saving/resource/SavingResource.java
+ com.systemsolution.saving.resource.SavingResource
+ com.systemsolution.saving.resource.SavingResource$SavingResourceBuilder
+com/systemsolution/security/jwt/JwtAuthEntryPoint.java
+ com.systemsolution.security.jwt.JwtAuthEntryPoint
+com/systemsolution/model/User.java
+ com.systemsolution.model.User
+com/systemsolution/saving/service/PDFService.java
+ com.systemsolution.saving.service.PDFService
+com/systemsolution/authentication/message/response/ResponseMessage.java
+ com.systemsolution.authentication.message.response.ResponseMessage
+com/systemsolution/model/Client.java
+ com.systemsolution.model.Client
+ com.systemsolution.model.Client$ClientBuilder
+com/systemsolution/repository/SavingRepository.java
+ com.systemsolution.repository.SavingRepository
+com/systemsolution/saving/resource/SavingMovementRequest.java
+ com.systemsolution.saving.resource.SavingMovementRequest
+ com.systemsolution.saving.resource.SavingMovementRequest$SavingMovementRequestBuilder
+com/systemsolution/commons/auditing/JpaAuditingConfiguration.java
+ com.systemsolution.commons.auditing.JpaAuditingConfiguration
+com/systemsolution/saving/controller/SavingController.java
+ com.systemsolution.saving.controller.SavingController
+com/systemsolution/saving/service/SavingService.java
+ com.systemsolution.saving.service.SavingService
+com/systemsolution/commons/serializers/MoneySerializer.java
+ com.systemsolution.commons.serializers.MoneySerializer
+com/systemsolution/commons/wrapper/ApiResult.java
+ com.systemsolution.commons.wrapper.ApiResult
+com/systemsolution/commons/handler/KodinguExceptionHandler.java
+ com.systemsolution.commons.handler.KodinguExceptionHandler
+com/systemsolution/repository/SavingMovementRepository.java
+ com.systemsolution.repository.SavingMovementRepository
+com/systemsolution/security/jwt/JwtProvider.java
+ com.systemsolution.security.jwt.JwtProvider
+com/systemsolution/model/SavingMovement.java
+ com.systemsolution.model.SavingMovement
+ com.systemsolution.model.SavingMovement$MovementType
+ com.systemsolution.model.SavingMovement$SavingMovementBuilder
+com/systemsolution/authentication/message/request/SignUpForm.java
+ com.systemsolution.authentication.message.request.SignUpForm
+com/systemsolution/authentication/message/response/JwtResponse.java
+ com.systemsolution.authentication.message.response.JwtResponse
+com/systemsolution/commons/handler/ApiSubError.java
+ com.systemsolution.commons.handler.ApiSubError
+ com.systemsolution.commons.handler.ApiValidationError
+com/systemsolution/security/services/FileService.java
+ com.systemsolution.security.services.FileService
+ com.systemsolution.security.services.FileService$1
+ com.systemsolution.security.services.FileService$ResourceType

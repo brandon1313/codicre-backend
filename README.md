@@ -1,1 +1,2 @@
-# codicre-backend
+# SpringBackend
+Backend con spring boot y JWT auth.

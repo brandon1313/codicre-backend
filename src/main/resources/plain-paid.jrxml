@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.13.0.final using JasperReports Library version 6.13.0-46ada4d1be8f3c5985fd0b6146f3ed44caed6f05  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="plain-paid" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isFloatColumnFooter="true" uuid="d4d05e48-6867-4dcc-aa5b-d8d3d72f2fd0">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="name" class="java.lang.String"/>
+	<field name="payDate" class="java.util.Date"/>
+	<field name="capital" class="java.math.BigDecimal"/>
+	<field name="interest" class="java.math.BigDecimal"/>
+	<field name="quota" class="java.math.BigDecimal"/>
+	<field name="capitalBalance" class="java.math.BigDecimal"/>
+	<field name="dpi" class="java.lang.String"/>
+	<field name="phoneNumber" class="java.lang.String"/>
+	<field name="address" class="java.lang.String"/>
+	<field name="ammount" class="java.math.BigDecimal"/>
+	<field name="lendTerm" class="java.lang.String"/>
+	<field name="periodicity" class="java.lang.String"/>
+	<field name="percentageInterest" class="java.math.BigDecimal"/>
+	<field name="approbedDate" class="java.util.Date"/>
+	<field name="firstPaidDate" class="java.util.Date"/>
+	<field name="creditNumber" class="java.lang.String"/>
+	<field name="payNumber" class="java.lang.Integer"/>
+	<variable name="capital1" class="java.math.BigDecimal" resetType="Column" calculation="Sum">
+		<variableExpression><![CDATA[$F{capital}]]></variableExpression>
+	</variable>
+	<variable name="interest1" class="java.math.BigDecimal" resetType="Column" calculation="Sum">
+		<variableExpression><![CDATA[$F{interest}]]></variableExpression>
+	</variable>
+	<variable name="quota1" class="java.math.BigDecimal" resetType="Column" calculation="Sum">
+		<variableExpression><![CDATA[$F{quota}]]></variableExpression>
+	</variable>
+	<variable name="capital2" class="java.math.BigDecimal" resetType="Column" calculation="Sum">
+		<variableExpression><![CDATA[$F{capital}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="81" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="0" width="111" height="81" uuid="748e5c69-e28e-4f74-b51c-498b5c2e671e"/>
+				<imageExpression><![CDATA["C:/Users/egombra/Documents/Proyectos/CodiCre/codicre.PNG"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="380" y="60" width="60" height="20" uuid="3e114a8d-16d4-4aeb-bda0-66cf7a89933a"/>
+				<textElement textAlignment="Center">
+					<font fontName="Inconsolata Medium" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Prestamo No. ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="440" y="60" width="120" height="20" uuid="181abe2d-15aa-4bf7-86a4-5f91f03133c8"/>
+				<textElement textAlignment="Center">
+					<font fontName="Inconsolata Medium" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{creditNumber}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="130" y="0" width="310" height="30" uuid="024c3fb8-c600-458d-91d0-e8445184b215"/>
+				<textElement textAlignment="Center">
+					<font fontName="Inconsolata Medium" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[EMPRESA CODICRE S.A]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="120" splitType="Stretch">
+			<staticText>
+				<reportElement x="10" y="20" width="100" height="20" uuid="09468c13-9a12-4e17-84db-43c0cb211354"/>
+				<textElement>
+					<font fontName="Inconsolata Medium" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nombre:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="31" width="99" height="20" uuid="5984f7a6-f4c7-49f6-88bb-afff0fa318ea"/>
+				<textElement>
+					<font fontName="Inconsolata Medium" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Direccion:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="41" width="100" height="20" uuid="e926180c-80f1-4c00-a47c-11ada751b8a8"/>
+				<textElement>
+					<font fontName="Inconsolata Medium" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DPI:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="51" width="100" height="20" uuid="97c157f2-1355-4918-bfe5-e6cdf7c20f56"/>
+				<textElement>
+					<font fontName="Inconsolata Medium" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Numero de telefono:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="0" width="200" height="20" uuid="da77bf3b-223b-4497-ad0f-88c3868d4418"/>
+				<textElement>
+					<font fontName="Inconsolata Medium" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Plan de Amortizacion de deudas]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="110" y="19" width="200" height="20" uuid="7c9e6c4f-df6b-423c-a7d1-15673cd3b5cd"/>
+				<textElement>
+					<font fontName="Inconsolata Medium"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="110" y="29" width="200" height="20" uuid="729f8280-ce96-43ae-89bf-3a1ad28d5bc7"/>
+				<textElement>
+					<font fontName="Inconsolata Medium"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{address}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="110" y="39" width="200" height="20" uuid="5759e973-13c3-4df6-9de1-bbb01d3b73fd"/>
+				<textElement>
+					<font fontName="Inconsolata Medium"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dpi}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="110" y="49" width="200" height="20" uuid="55cbcd49-8aea-4664-a059-902718ab0bf2"/>
+				<textElement>
+					<font fontName="Inconsolata Medium"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{phoneNumber}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="320" y="20" width="110" height="20" uuid="52cbc9fa-f0e6-49dc-b19f-2f231b075487"/>
+				<textElement>
+					<font fontName="Inconsolata Medium" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Monto del prestamo:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="430" y="19" width="100" height="20" uuid="6bfeaa21-245f-476f-a845-378d6c9efa86"/>
+				<textElement>
+					<font fontName="Inconsolata Medium"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ammount}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="320" y="34" width="110" height="20" uuid="54627ca0-40e7-4d24-82c8-7955554073ac"/>
+				<textElement>
+					<font fontName="Inconsolata Medium" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Plazo:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="430" y="31" width="100" height="20" uuid="e2c12605-4f23-4815-97d0-0cf8fc4b4355"/>
+				<textElement>
+					<font fontName="Inconsolata Medium"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{lendTerm}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="320" y="49" width="110" height="20" uuid="dcd6e4af-7ce7-4b9d-8575-b2de95fa1a91"/>
+				<textElement>
+					<font fontName="Inconsolata Medium" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Forma de pago:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="430" y="48" width="100" height="20" uuid="35a97827-4466-414d-8008-e0a1a850da16"/>
+				<textElement>
+					<font fontName="Inconsolata Medium"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{periodicity}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="320" y="66" width="110" height="20" uuid="90a8eeb9-0a00-4ad4-b0e9-85ece80a381c"/>
+				<textElement>
+					<font fontName="Inconsolata Medium" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Interes:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="430" y="65" width="100" height="20" uuid="b888349f-2bb0-4b8a-a037-24b4df7529c4"/>
+				<textElement>
+					<font fontName="Inconsolata Medium"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{percentageInterest}+"%"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="321" y="81" width="110" height="20" uuid="d82f3871-5935-4cfa-8109-5077622a12d0"/>
+				<textElement>
+					<font fontName="Inconsolata Medium" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fecha de aprobacion:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="431" y="79" width="100" height="20" uuid="34024fd0-1d63-4788-912c-0ff2659210eb"/>
+				<textElement>
+					<font fontName="Inconsolata Medium"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{approbedDate}]]></textFieldExpression>
+				<patternExpression><![CDATA["yyyy-MM-dd"]]></patternExpression>
+			</textField>
+			<staticText>
+				<reportElement x="321" y="96" width="110" height="20" uuid="0ddf576d-b96d-4e62-b0f9-d22c06c197b5"/>
+				<textElement>
+					<font fontName="Inconsolata Medium" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fecha de Primer pago:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="431" y="94" width="100" height="20" uuid="2f6d01df-2b5e-4d8b-a58b-8c6cf0b1055c"/>
+				<textElement>
+					<font fontName="Inconsolata Medium"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{firstPaidDate}]]></textFieldExpression>
+				<patternExpression><![CDATA["yyyy-MM-dd"]]></patternExpression>
+			</textField>
+			<line>
+				<reportElement x="10" y="10" width="169" height="1" uuid="50160f53-b394-4339-8bcf-72ef2907590d"/>
+			</line>
+			<staticText>
+				<reportElement x="0" y="99" width="150" height="20" uuid="d9cdb6b9-10e2-4e97-a3c9-a5dc178f75bf"/>
+				<textElement>
+					<font fontName="Inconsolata Medium" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Plan de pagos]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="119" width="550" height="1" uuid="e9f8157a-d72f-4ecd-a85e-bb69265c241d">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="21" splitType="Stretch">
+			<staticText>
+				<reportElement x="105" y="0" width="39" height="19" uuid="3cd99d95-f8f9-4b2f-9c36-e51dcdd1dbf4">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ad5c9772-a58d-4ef4-ace3-87210d715cfd"/>
+				</reportElement>
+				<box>
+					<topPen lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Inconsolata Medium" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[No. pago]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="144" y="0" width="60" height="19" uuid="4908ba94-8ae1-4c2e-a7db-77d623207420">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="dcfab3bc-945d-497a-aca7-bd5c47b20fd1"/>
+				</reportElement>
+				<box>
+					<topPen lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Inconsolata Medium" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fecha de pago]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="204" y="0" width="50" height="19" uuid="7e7abc02-093b-4190-beb8-779f42a5a96f">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4ff0e59d-ab53-4477-8389-a6b5fc4526c7"/>
+				</reportElement>
+				<box>
+					<topPen lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Inconsolata Medium" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Capital]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="254" y="0" width="61" height="19" uuid="83162e55-d0ce-47a1-96ee-e0c39cee4248">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="bf3a2bf6-4516-4619-828f-f7b84d7f85f3"/>
+				</reportElement>
+				<box>
+					<topPen lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Inconsolata Medium" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Interés]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="385" y="0" width="60" height="19" uuid="6198d370-158c-45fa-9feb-060ff9a18e34">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="779bb41a-65ca-4a39-8928-bfb40523d2cc"/>
+				</reportElement>
+				<box>
+					<topPen lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Inconsolata Medium" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Saldo de capital]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="315" y="0" width="70" height="19" uuid="321ee87f-e445-498c-8958-4169464cdd4a">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8965816a-ea0b-4409-856f-9830a78db00e"/>
+				</reportElement>
+				<box>
+					<topPen lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Inconsolata Medium" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total de cuota]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="11" splitType="Stretch">
+			<property name="com.jaspersoft.studio.layout"/>
+			<textField>
+				<reportElement x="105" y="0" width="39" height="10" uuid="5749842c-3b75-49b2-99bc-8bbba38871b2">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ad5c9772-a58d-4ef4-ace3-87210d715cfd"/>
+				</reportElement>
+				<box>
+					<topPen lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Inconsolata Medium" size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{payNumber}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="144" y="0" width="60" height="10" uuid="386b76b4-ff59-4282-884d-150a853bd628">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="dcfab3bc-945d-497a-aca7-bd5c47b20fd1"/>
+				</reportElement>
+				<box>
+					<topPen lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Inconsolata Medium" size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{payDate}]]></textFieldExpression>
+				<patternExpression><![CDATA["yyyy-MM-dd"]]></patternExpression>
+			</textField>
+			<textField>
+				<reportElement x="204" y="0" width="50" height="10" uuid="8a9f6c68-f679-4f89-b044-367365eb7aa7">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4ff0e59d-ab53-4477-8389-a6b5fc4526c7"/>
+				</reportElement>
+				<box>
+					<topPen lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Inconsolata Medium" size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{capital}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="254" y="0" width="61" height="10" uuid="904c551d-c391-441b-a343-5283f2e3d92b">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="bf3a2bf6-4516-4619-828f-f7b84d7f85f3"/>
+				</reportElement>
+				<box>
+					<topPen lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Inconsolata Medium" size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{interest}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="315" y="0" width="70" height="10" uuid="98c5ecc3-04ce-47c5-b783-42ca9fa29857">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8965816a-ea0b-4409-856f-9830a78db00e"/>
+				</reportElement>
+				<box>
+					<topPen lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Inconsolata Medium" size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{quota}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="385" y="0" width="60" height="10" uuid="034f43b9-0c58-476c-90f4-2afb5ef87ddf">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="779bb41a-65ca-4a39-8928-bfb40523d2cc"/>
+				</reportElement>
+				<box>
+					<topPen lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Inconsolata Medium" size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{capitalBalance}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="21" splitType="Stretch">
+			<staticText>
+				<reportElement x="63" y="0" width="140" height="20" uuid="c3c171b4-3a7e-42f0-9ddf-1e952f6d4080"/>
+				<textElement>
+					<font fontName="Inconsolata Medium"/>
+				</textElement>
+				<text><![CDATA[Totales:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="204" y="0" width="50" height="20" uuid="ab0ed244-8f24-4c28-bc88-d8fd82f3cb93"/>
+				<textElement textAlignment="Center">
+					<font fontName="Inconsolata Medium"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new BigDecimal($V{capital1}.doubleValue()).setScale(0, RoundingMode.HALF_UP) + ".00"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="254" y="0" width="60" height="20" uuid="cf6f6ab8-808a-44dd-a471-0b2a1db2bf24"/>
+				<textElement textAlignment="Center">
+					<font fontName="Inconsolata Medium"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new BigDecimal($V{interest1}.doubleValue()).setScale(0, RoundingMode.HALF_UP)+".00"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="315" y="0" width="70" height="20" uuid="8bc599d2-696e-49cb-8679-11653fce2328"/>
+				<textElement textAlignment="Center">
+					<font fontName="Inconsolata Medium"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new BigDecimal($V{quota1}.doubleValue()).setScale(0, RoundingMode.HALF_UP)+".00"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="385" y="0" width="60" height="20" uuid="55117097-bcb2-48a7-80d1-748fc3455685"/>
+				<textElement textAlignment="Center">
+					<font fontName="Inconsolata Medium"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new BigDecimal($V{capital2}.doubleValue()).setScale(0, RoundingMode.HALF_UP)+".00"]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="63" y="0" width="382" height="1" uuid="3a73e9a3-f06c-4259-a8a5-1810c37e37b4"/>
+			</line>
+		</band>
+	</columnFooter>
+</jasperReport>
